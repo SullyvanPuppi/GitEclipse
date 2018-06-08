@@ -19,3 +19,5 @@ boolean lancamento
 boolean destaque
 boolean pronto
 boolean construcao
+
+Editado no Linux após clonagem do Git.
