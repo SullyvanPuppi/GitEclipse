@@ -1,0 +1,6 @@
+Manifest-Version: 1.1
+Sealed: true
+Main-Class: execucao.Sistema
+Manifest-Version: 1.1
+Class-Path: lib/commons-collections-2.1.jar lib/commons-javaflow-20060411.jar lib/commons-logging-api-1.0.2.jar lib/commons-net-1.4.1.jar lib/HELPSET.jar lib/hsviewer.jar lib/iReport.jar lib/itext-1.3.1.jar lib/jasperreports-3.0.0.jar lib/jasperreports-extensions-1.3.1.jar lib/jh.jar lib/jhall.jar lib/jhbasic.jar lib/jhindexer.jar lib/jhsearch.jar lib/jsearch.jar lib/mysql-connector-java-5.0.7-bin.jar
+

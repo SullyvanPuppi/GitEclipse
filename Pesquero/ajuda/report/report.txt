@@ -1,0 +1,29 @@
+Topic Title	MapID	File Path	Index Keywords	Status	Notes
+Agenda de contatos	Agenda_de_contatos	HTML\Agenda_de_contatos.htm		Not Specified	 
+Ajuda	FirstTopic	HTML\FirstTopic.htm		Not Specified	 
+Apresentacao	Apresentacao	HTML\Apresentacao.htm		Not Specified	 
+Cadastro	Cadastro	HTML\Cadastro.htm		Not Specified	 
+Cadastro de clientes	Cadastro_de_clientes	HTML\Cadastro_de_clientes.htm		Not Specified	 
+Cadastro de empresa visitada	Cadastro_de_empresa_visitada	HTML\Cadastro_de_empresa_visitada.htm		Not Specified	 
+Cadastro de funcionário	Cadastro_de_funcion_rio	HTML\Cadastro_de_funcion_rio.htm		Not Specified	 
+Cadastro de representada	Cadastro_de_representada	HTML\Cadastro_de_representada.htm		Not Specified	 
+Cadastro de usuário	Cadastro_de_usu_rio	HTML\Cadastro_de_usu_rio.htm		Not Specified	 
+CadastroUsuario	CadastroUsuario	HTML\CadastroUsuario.htm		Not Specified	 
+Consulta de clientes	Consulta_de_clientes	HTML\Consulta_de_clientes.htm		Not Specified	 
+Consulta de empresas visitadas	Consulta_de_empresas_visitadas	HTML\Consulta_de_empresas_visitadas.htm		Not Specified	 
+Consulta de funcionários	Consulta_de_funcion_rios	HTML\Consulta_de_funcion_rios.htm		Not Specified	 
+Consulta de representadas	Consulta_de_representadas	HTML\Consulta_de_representadas.htm		Not Specified	 
+Consulta de vendas	Consulta_de_vendas	HTML\Consulta_de_vendas.htm		Not Specified	 
+Cópia de segurança	C_pia_de_seguran_a	HTML\C_pia_de_seguran_a.htm		Not Specified	 
+EmpresaResponsavel	EmpresaResponsavel	HTML\EmpresaResponsavel.htm		Not Specified	 
+Login	Login	HTML\Login.htm		Not Specified	 
+Notificações	Notifica__es	HTML\Notifica__es.htm		Not Specified	 
+Principal	Principal	HTML\Principal.htm		Not Specified	 
+Recados	Recados	HTML\Recados.htm		Not Specified	 
+Relatório de clientes	Relat_rio_de_clientes	HTML\Relat_rio_de_clientes.htm		Not Specified	 
+Relatório de empresas visitadas	Relat_rio_de_empresas_visitadas	HTML\Relat_rio_de_empresas_visitadas.htm		Not Specified	 
+Relatório de funcionários	Relat_rio_de_funcion_rios	HTML\Relat_rio_de_funcion_rios.htm		Not Specified	 
+Relatório de representadas	Relat_rio_de_representadas	HTML\Relat_rio_de_representadas.htm		Not Specified	 
+Relatório de vendas	Relat_rio_de_vendas	HTML\Relat_rio_de_vendas.htm		Not Specified	 
+Usuario	Usuario	HTML\Usuario.htm		Not Specified	 
+Visitas	Visitas	HTML\Visitas.htm		Not Specified	 

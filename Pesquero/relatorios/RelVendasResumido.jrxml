@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="UTF-8"  ?>
+<!-- Created with iReport - A designer for JasperReports -->
+<!DOCTYPE jasperReport PUBLIC "//JasperReports//DTD Report Design//EN" "http://jasperreports.sourceforge.net/dtds/jasperreport.dtd">
+<jasperReport
+		 name="classic"
+		 columnCount="1"
+		 printOrder="Vertical"
+		 orientation="Portrait"
+		 pageWidth="595"
+		 pageHeight="842"
+		 columnWidth="539"
+		 columnSpacing="0"
+		 leftMargin="28"
+		 rightMargin="28"
+		 topMargin="28"
+		 bottomMargin="28"
+		 whenNoDataType="NoPages"
+		 isTitleNewPage="false"
+		 isSummaryNewPage="false">
+	<property name="ireport.scriptlethandling" value="0" />
+	<property name="ireport.encoding" value="UTF-8" />
+	<import value="java.util.*" />
+	<import value="net.sf.jasperreports.engine.*" />
+	<import value="net.sf.jasperreports.engine.data.*" />
+
+	<queryString><![CDATA[SELECT * FROM tb_Vendas ORDER BY dt_Venda desc;]]></queryString>
+
+	<field name="cd_NotaFiscal" class="java.lang.Long"/>
+	<field name="cd_CnpjEmpresaCliente" class="java.lang.String"/>
+	<field name="cd_CnpjEmpresaRepresentada" class="java.lang.String"/>
+	<field name="nm_EmpresaCliente" class="java.lang.String"/>
+	<field name="nm_EmpresaRepresentada" class="java.lang.String"/>
+	<field name="nm_Produto" class="java.lang.String"/>
+	<field name="vl_Produto" class="java.lang.Double"/>
+	<field name="sg_Tipo" class="java.lang.String"/>
+	<field name="qt_Produto" class="java.lang.Long"/>
+	<field name="vl_FinalVenda" class="java.lang.String"/>
+	<field name="dt_Venda" class="java.lang.String"/>
+	<field name="dt_Entrega" class="java.lang.String"/>
+	<field name="ds_Observacoes" class="java.lang.String"/>
+	<field name="sg_Comissionado" class="java.lang.Boolean"/>
+	<field name="cd_Funcionario" class="java.lang.String"/>
+	<field name="vl_Acrescimo" class="java.lang.Double"/>
+	<field name="nm_Funcionario" class="java.lang.String"/>
+	<field name="cd_Pedido" class="java.lang.String"/>
+
+		<background>
+			<band height="786"  isSplitAllowed="true" >
+				<image  vAlign="Bottom" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="0"
+						y="0"
+						width="539"
+						height="786"
+						key="image-1"
+						stretchType="RelativeToBandHeight"
+						positionType="FixRelativeToBottom"/>
+					<box></box>
+					<graphicElement stretchType="RelativeToBandHeight"/>
+					<imageExpression class="java.lang.String"><![CDATA["relatorios/fundoRelA.gif"]]></imageExpression>
+				</image>
+				<staticText>
+					<reportElement
+						x="356"
+						y="112"
+						width="163"
+						height="29"
+						forecolor="#000099"
+						key="staticText-4"/>
+					<box></box>
+					<textElement>
+						<font size="20"/>
+					</textElement>
+				<text><![CDATA[Vendas resumido]]></text>
+				</staticText>
+			</band>
+		</background>
+		<title>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</title>
+		<pageHeader>
+			<band height="161"  isSplitAllowed="true" >
+			</band>
+		</pageHeader>
+		<columnHeader>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</columnHeader>
+		<detail>
+			<band height="191"  isSplitAllowed="true" >
+				<rectangle>
+					<reportElement
+						x="10"
+						y="28"
+						width="511"
+						height="159"
+						forecolor="#2B2B80"
+						key="rectangle-1"/>
+					<graphicElement stretchType="NoStretch"/>
+				</rectangle>
+				<staticText>
+					<reportElement
+						mode="Opaque"
+						x="10"
+						y="3"
+						width="171"
+						height="26"
+						forecolor="#FFFFFF"
+						backcolor="#2B2B80"
+						key="staticText-1"
+						positionType="Float"/>
+					<box leftPadding="2" rightPadding="2" topPadding="2"></box>
+					<textElement textAlignment="Center">
+						<font fontName="Verdana" size="18"/>
+					</textElement>
+				<text><![CDATA[Venda]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" pattern="" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="14"
+						y="51"
+						width="398"
+						height="17"
+						forecolor="#000000"
+						backcolor="#FFFFFF"
+						key="textField-13"/>
+					<box>					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+</box>
+					<textElement>
+						<font fontName="Verdana" size="12"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA["Nota fiscal:  "+$F{cd_NotaFiscal}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" pattern="" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="14"
+						y="70"
+						width="500"
+						height="17"
+						forecolor="#000000"
+						backcolor="#FFFFFF"
+						key="textField-16"/>
+					<box>					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+</box>
+					<textElement>
+						<font fontName="Verdana" size="12"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA["Empresa cliente:  "+$F{nm_EmpresaCliente}+"     CNPJ:  "+$F{cd_CnpjEmpresaCliente}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" pattern="" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="14"
+						y="89"
+						width="500"
+						height="17"
+						forecolor="#000000"
+						backcolor="#FFFFFF"
+						key="textField-17"/>
+					<box>					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+</box>
+					<textElement>
+						<font fontName="Verdana" size="12"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA["Empresa representada:  "+$F{nm_EmpresaRepresentada}+"     CNPJ:  "+$F{cd_CnpjEmpresaRepresentada}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" pattern="" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="14"
+						y="127"
+						width="500"
+						height="17"
+						forecolor="#000000"
+						backcolor="#FFFFFF"
+						key="textField-18"/>
+					<box>					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+</box>
+					<textElement>
+						<font fontName="Verdana" size="12"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA["Nome do produto: "+$F{nm_Produto}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" pattern="" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="14"
+						y="146"
+						width="312"
+						height="17"
+						forecolor="#000000"
+						backcolor="#FFFFFF"
+						key="textField-21"/>
+					<box>					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+</box>
+					<textElement>
+						<font fontName="Verdana" size="12"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA["Quantidade vendida:  "+$F{qt_Produto}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" pattern="" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="14"
+						y="165"
+						width="249"
+						height="17"
+						forecolor="#000000"
+						backcolor="#FFFFFF"
+						key="textField-22"/>
+					<box>					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+</box>
+					<textElement>
+						<font fontName="Verdana" size="12"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA["Valor da venda: "+$F{vl_FinalVenda}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" pattern="" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="14"
+						y="108"
+						width="500"
+						height="17"
+						forecolor="#000000"
+						backcolor="#FFFFFF"
+						key="textField-29"/>
+					<box>					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+</box>
+					<textElement>
+						<font fontName="Verdana" size="12"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA["Nome do funcionário:  "+$F{nm_Funcionario}+"     Matrícula:  "+$F{cd_Funcionario}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" pattern="" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="14"
+						y="32"
+						width="398"
+						height="17"
+						forecolor="#000000"
+						backcolor="#FFFFFF"
+						key="textField-30"/>
+					<box>					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+</box>
+					<textElement>
+						<font fontName="Verdana" size="12"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA["Pedido:  "+$F{cd_Pedido}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" pattern="" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="270"
+						y="165"
+						width="243"
+						height="17"
+						forecolor="#000000"
+						backcolor="#FFFFFF"
+						key="textField-31"/>
+					<box>					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+</box>
+					<textElement>
+						<font fontName="Verdana" size="12"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA["Venda realizada em:  "+$F{dt_Venda}]]></textFieldExpression>
+				</textField>
+			</band>
+		</detail>
+		<columnFooter>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</columnFooter>
+		<pageFooter>
+			<band height="27"  isSplitAllowed="true" >
+				<rectangle>
+					<reportElement
+						x="2"
+						y="0"
+						width="534"
+						height="23"
+						forecolor="#2B2B80"
+						backcolor="#2B2B80"
+						key="rectangle-3"/>
+					<graphicElement stretchType="NoStretch"/>
+				</rectangle>
+				<textField isStretchWithOverflow="false" pattern="" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="10"
+						y="4"
+						width="209"
+						height="19"
+						forecolor="#FFFFFF"
+						backcolor="#FFFFFF"
+						key="textField-9"/>
+					<box>					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+</box>
+					<textElement>
+						<font pdfFontName="Helvetica-Bold" size="10" isBold="true"/>
+					</textElement>
+				<textFieldExpression   class="java.util.Date"><![CDATA[new Date()]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" pattern="" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="326"
+						y="4"
+						width="170"
+						height="19"
+						forecolor="#FFFFFF"
+						backcolor="#FFFFFF"
+						key="textField-10"/>
+					<box>					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+</box>
+					<textElement textAlignment="Right">
+						<font pdfFontName="Helvetica-Bold" size="10" isBold="true"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA["Página " + $V{PAGE_NUMBER} + " de "]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" pattern="" isBlankWhenNull="false" evaluationTime="Report" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="500"
+						y="4"
+						width="36"
+						height="19"
+						forecolor="#FFFFFF"
+						backcolor="#FFFFFF"
+						key="textField-11"/>
+					<box>					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+</box>
+					<textElement>
+						<font pdfFontName="Helvetica-Bold" size="10" isBold="true"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA["" + $V{PAGE_NUMBER}]]></textFieldExpression>
+				</textField>
+			</band>
+		</pageFooter>
+		<summary>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</summary>
+</jasperReport>

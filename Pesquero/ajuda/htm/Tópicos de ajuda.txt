@@ -1,0 +1,61 @@
+Tópicos de ajuda
+
+Iniciando o sistema
+-Tela principal
+-Funções do programa
+
+Usuários
+-Cadastro de usuários
+-Direitos de acesso
+-Alterando a senha
+
+Segurança
+-Realizando cópia de segurança
+-Recuperando base de dados
+
+Logoff
+
+Administrativo
+-Alíquotas e benefícios
+-Folha de pagamento
+-Emitindo a foha de pagamento
+-Demonstrativo de pagamento
+-Relatórios administrativos
+
+Funcionários
+-Cadastro de funcionários
+-Consultando funcionários
+-Removendo funcionários
+-Relatórios de funcionários
+
+Representadas
+-Cadastro de representadas
+-Consultando representadas
+-Removendo representadas
+-Reletórios de representadas
+
+Clientes
+-Cadastro de clientes
+-Consultando clientes
+-Removendo clientes
+-Relatórios de clientes
+
+Visitas
+-Cadastro de clientes visitados
+-Consultando clientes visitados
+-Removendo clientes visitados
+-Relatórios de clientes visitados
+
+Vendas
+-Cadastro de vendas
+-Cadastrando comissão
+-Consultando vendas
+-Removendo vendas
+-Relatórios de vendas
+
+Úteis
+-Recados
+-Agenda de contatos
+-Notificações
+-Formulário de venda
+-Formulário de visita

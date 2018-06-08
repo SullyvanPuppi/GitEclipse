@@ -1,0 +1,832 @@
+<?xml version="1.0" encoding="UTF-8"  ?>
+<!-- Created with iReport - A designer for JasperReports -->
+<!DOCTYPE jasperReport PUBLIC "//JasperReports//DTD Report Design//EN" "http://jasperreports.sourceforge.net/dtds/jasperreport.dtd">
+<jasperReport
+		 name="RelEmpresaResponsavel"
+		 columnCount="1"
+		 printOrder="Vertical"
+		 orientation="Portrait"
+		 pageWidth="595"
+		 pageHeight="842"
+		 columnWidth="539"
+		 columnSpacing="0"
+		 leftMargin="28"
+		 rightMargin="28"
+		 topMargin="28"
+		 bottomMargin="28"
+		 whenNoDataType="NoPages"
+		 isTitleNewPage="false"
+		 isSummaryNewPage="false">
+	<property name="ireport.scriptlethandling" value="0" />
+	<property name="ireport.encoding" value="UTF-8" />
+	<import value="java.util.*" />
+	<import value="net.sf.jasperreports.engine.*" />
+	<import value="net.sf.jasperreports.engine.data.*" />
+
+	<parameter name="nmEmpresa" isForPrompting="false" class="java.lang.String"/>
+	<parameter name="dirSubRel" isForPrompting="false" class="java.lang.String"/>
+	<parameter name="dtVisita" isForPrompting="false" class="java.lang.String"/>
+	<parameter name="nmVendedor" isForPrompting="false" class="java.lang.String"/>
+	<queryString><![CDATA[SELECT * FROM tb_EmpresasClientesVisitas WHERE nm_Empresa=$P{nmEmpresa} AND dt_Visita=$P{dtVisita} AND nm_Funcionario=$P{nmVendedor};]]></queryString>
+
+	<field name="id_Visita" class="java.lang.Long"/>
+	<field name="nm_Empresa" class="java.lang.String"/>
+	<field name="cd_Segmento" class="java.lang.String"/>
+	<field name="nm_Endereco" class="java.lang.String"/>
+	<field name="cd_EnderecoNumero" class="java.lang.String"/>
+	<field name="ds_EnderecoComplemento" class="java.lang.String"/>
+	<field name="nm_EnderecoBairro" class="java.lang.String"/>
+	<field name="nm_EnderecoCidade" class="java.lang.String"/>
+	<field name="sg_EnderecoEstado" class="java.lang.String"/>
+	<field name="cd_Cep" class="java.lang.String"/>
+	<field name="cd_Telefone" class="java.lang.String"/>
+	<field name="cd_Fax" class="java.lang.String"/>
+	<field name="nm_Email" class="java.lang.String"/>
+	<field name="ds_Site" class="java.lang.String"/>
+	<field name="dt_Visita" class="java.lang.String"/>
+	<field name="sg_TipoVisita" class="java.lang.String"/>
+	<field name="cd_Funcionario" class="java.lang.String"/>
+	<field name="dt_Lembrar" class="java.lang.String"/>
+	<field name="sg_Lembrar" class="java.lang.Boolean"/>
+	<field name="nm_Funcionario" class="java.lang.String"/>
+	<field name="ds_Obs" class="java.lang.String"/>
+
+		<background>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</background>
+		<title>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</title>
+		<pageHeader>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</pageHeader>
+		<columnHeader>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</columnHeader>
+		<detail>
+			<band height="786"  isSplitAllowed="true" >
+				<image  vAlign="Bottom" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="0"
+						y="0"
+						width="539"
+						height="786"
+						key="image-1"
+						stretchType="RelativeToBandHeight"
+						positionType="FixRelativeToBottom"/>
+					<box></box>
+					<graphicElement stretchType="RelativeToBandHeight"/>
+					<imageExpression class="java.lang.String"><![CDATA["relatorios/fundoRelA.gif"]]></imageExpression>
+				</image>
+				<rectangle>
+					<reportElement
+						x="11"
+						y="299"
+						width="511"
+						height="64"
+						forecolor="#2B2B80"
+						key="rectangle-4"/>
+					<graphicElement stretchType="NoStretch"/>
+				</rectangle>
+				<rectangle>
+					<reportElement
+						x="11"
+						y="187"
+						width="511"
+						height="84"
+						forecolor="#2B2B80"
+						key="rectangle-2"/>
+					<graphicElement stretchType="NoStretch"/>
+				</rectangle>
+				<staticText>
+					<reportElement
+						mode="Opaque"
+						x="11"
+						y="162"
+						width="171"
+						height="26"
+						forecolor="#FFFFFF"
+						backcolor="#2B2B80"
+						key="staticText-22"
+						positionType="Float"/>
+					<box leftPadding="2" rightPadding="2" topPadding="2"></box>
+					<textElement textAlignment="Center">
+						<font fontName="Verdana" size="18"/>
+					</textElement>
+				<text><![CDATA[Empresa]]></text>
+				</staticText>
+				<rectangle>
+					<reportElement
+						x="3"
+						y="758"
+						width="534"
+						height="23"
+						forecolor="#2B2B80"
+						backcolor="#2B2B80"
+						key="rectangle-1"/>
+					<graphicElement stretchType="NoStretch"/>
+				</rectangle>
+				<staticText>
+					<reportElement
+						x="342"
+						y="112"
+						width="188"
+						height="29"
+						forecolor="#000099"
+						key="staticText-18"/>
+					<box></box>
+					<textElement>
+						<font size="20"/>
+					</textElement>
+				<text><![CDATA[Empresas visitadas]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" pattern="" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="323"
+						y="762"
+						width="170"
+						height="19"
+						forecolor="#FFFFFF"
+						backcolor="#FFFFFF"
+						key="textField-18"/>
+					<box>					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+</box>
+					<textElement textAlignment="Right">
+						<font pdfFontName="Helvetica-Bold" size="10" isBold="true"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA["Página " + $V{PAGE_NUMBER} + " de "]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" pattern="" isBlankWhenNull="false" evaluationTime="Report" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="497"
+						y="762"
+						width="36"
+						height="19"
+						forecolor="#FFFFFF"
+						backcolor="#FFFFFF"
+						key="textField-19"/>
+					<box>					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+</box>
+					<textElement>
+						<font pdfFontName="Helvetica-Bold" size="10" isBold="true"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA["" + $V{PAGE_NUMBER}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" pattern="" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="7"
+						y="763"
+						width="209"
+						height="19"
+						forecolor="#FFFFFF"
+						backcolor="#FFFFFF"
+						key="textField-20"/>
+					<box>					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+</box>
+					<textElement>
+						<font pdfFontName="Helvetica-Bold" size="10" isBold="true"/>
+					</textElement>
+				<textFieldExpression   class="java.util.Date"><![CDATA[new Date()]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" pattern="" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="16"
+						y="191"
+						width="53"
+						height="17"
+						forecolor="#000000"
+						backcolor="#FFFFFF"
+						key="textField-22"/>
+					<box>					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+</box>
+					<textElement>
+						<font fontName="Verdana" size="12"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA["Nome:  "]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" pattern="" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="17"
+						y="249"
+						width="225"
+						height="17"
+						forecolor="#000000"
+						backcolor="#FFFFFF"
+						key="textField-24"/>
+					<box>					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+</box>
+					<textElement>
+						<font fontName="Verdana" size="12"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA["Segmento:  "+$F{cd_Segmento}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" pattern="" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="17"
+						y="210"
+						width="266"
+						height="17"
+						forecolor="#000000"
+						backcolor="#FFFFFF"
+						key="textField-27"/>
+					<box>					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+</box>
+					<textElement>
+						<font fontName="Verdana" size="12"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA["Data da visita:  "+$F{dt_Visita}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" pattern="" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="216"
+						y="148"
+						width="314"
+						height="17"
+						forecolor="#000000"
+						backcolor="#FFFFFF"
+						key="textField-41"/>
+					<box>					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+</box>
+					<textElement>
+						<font fontName="Verdana" size="12"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA["Realizada por:  "+$F{nm_Funcionario}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						mode="Opaque"
+						x="11"
+						y="274"
+						width="171"
+						height="26"
+						forecolor="#FFFFFF"
+						backcolor="#2B2B80"
+						key="staticText-24"
+						positionType="Float"/>
+					<box leftPadding="2" rightPadding="2" topPadding="2"></box>
+					<textElement textAlignment="Center">
+						<font fontName="Verdana" size="18"/>
+					</textElement>
+				<text><![CDATA[Emp. oferecidas]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="17"
+						y="229"
+						width="266"
+						height="18"
+						key="textField-44"/>
+					<box></box>
+					<textElement>
+						<font fontName="Verdana" size="12"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA["Tipo de visita:  "+$F{sg_TipoVisita}]]></textFieldExpression>
+				</textField>
+				<subreport  isUsingCache="true">
+					<reportElement
+						x="16"
+						y="303"
+						width="501"
+						height="56"
+						key="subreport-1"/>
+					<subreportParameter  name="nmEmpresa">
+						<subreportParameterExpression><![CDATA[$F{nm_Empresa}]]></subreportParameterExpression>
+					</subreportParameter>
+					<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					<subreportExpression  class="java.lang.String"><![CDATA[$P{dirSubRel}]]></subreportExpression>
+				</subreport>
+				<rectangle>
+					<reportElement
+						x="11"
+						y="542"
+						width="511"
+						height="47"
+						forecolor="#2B2B80"
+						key="rectangle-5"/>
+					<graphicElement stretchType="NoStretch"/>
+				</rectangle>
+				<rectangle>
+					<reportElement
+						x="11"
+						y="391"
+						width="511"
+						height="123"
+						forecolor="#2B2B80"
+						key="rectangle-6"/>
+					<graphicElement stretchType="NoStretch"/>
+				</rectangle>
+				<staticText>
+					<reportElement
+						mode="Opaque"
+						x="11"
+						y="366"
+						width="171"
+						height="26"
+						forecolor="#FFFFFF"
+						backcolor="#2B2B80"
+						key="staticText-25"
+						positionType="Float"/>
+					<box leftPadding="2" rightPadding="2" topPadding="2"></box>
+					<textElement textAlignment="Center">
+						<font fontName="Verdana" size="18"/>
+					</textElement>
+				<text><![CDATA[Endereço]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" pattern="" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="84"
+						y="393"
+						width="433"
+						height="17"
+						forecolor="#000000"
+						backcolor="#FFFFFF"
+						key="textField-45"/>
+					<box>					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+</box>
+					<textElement>
+						<font fontName="Verdana" size="12"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[( $F{nm_Endereco}==null ? "Não cadastrado" : $F{nm_Endereco} )]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						x="17"
+						y="393"
+						width="67"
+						height="17"
+						forecolor="#000000"
+						backcolor="#FFFFFF"
+						key="staticText-26"
+						positionType="Float"/>
+					<box>					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+</box>
+					<textElement>
+						<font fontName="Verdana" size="12"/>
+					</textElement>
+				<text><![CDATA[Endereço:]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" pattern="" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="78"
+						y="412"
+						width="164"
+						height="17"
+						forecolor="#000000"
+						backcolor="#FFFFFF"
+						key="textField-46"/>
+					<box>					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+</box>
+					<textElement>
+						<font fontName="Verdana" size="12"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[""+( $F{cd_EnderecoNumero}==null ? "Não cadastrado" : $F{cd_EnderecoNumero} )]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						x="17"
+						y="412"
+						width="56"
+						height="17"
+						forecolor="#000000"
+						backcolor="#FFFFFF"
+						key="staticText-27"
+						positionType="Float"/>
+					<box>					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+</box>
+					<textElement>
+						<font fontName="Verdana" size="12"/>
+					</textElement>
+				<text><![CDATA[Número:]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" pattern="" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="342"
+						y="416"
+						width="175"
+						height="17"
+						forecolor="#000000"
+						backcolor="#FFFFFF"
+						key="textField-47"/>
+					<box>					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+</box>
+					<textElement>
+						<font fontName="Verdana" size="12"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[( $F{ds_EnderecoComplemento}==null ? "" : $F{ds_EnderecoComplemento} )]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						x="251"
+						y="416"
+						width="96"
+						height="17"
+						forecolor="#000000"
+						backcolor="#FFFFFF"
+						key="staticText-28"
+						positionType="Float"/>
+					<box>					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+</box>
+					<textElement>
+						<font fontName="Verdana" size="12"/>
+					</textElement>
+				<text><![CDATA[Complemento:]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" pattern="" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="60"
+						y="431"
+						width="182"
+						height="17"
+						forecolor="#000000"
+						backcolor="#FFFFFF"
+						key="textField-48"/>
+					<box>					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+</box>
+					<textElement>
+						<font fontName="Verdana" size="12"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[( $F{nm_EnderecoBairro}==null ? "Não cadastrado" : $F{nm_EnderecoBairro} )]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						x="17"
+						y="431"
+						width="43"
+						height="17"
+						forecolor="#000000"
+						backcolor="#FFFFFF"
+						key="staticText-29"
+						positionType="Float"/>
+					<box>					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+</box>
+					<textElement>
+						<font fontName="Verdana" size="12"/>
+					</textElement>
+				<text><![CDATA[Bairro:]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" pattern="" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="305"
+						y="435"
+						width="212"
+						height="17"
+						forecolor="#000000"
+						backcolor="#FFFFFF"
+						key="textField-49"/>
+					<box>					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+</box>
+					<textElement>
+						<font fontName="Verdana" size="12"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[( $F{nm_EnderecoCidade}==null ? "Nao cadastrado" : $F{nm_EnderecoCidade} )]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						x="251"
+						y="435"
+						width="50"
+						height="17"
+						forecolor="#000000"
+						backcolor="#FFFFFF"
+						key="staticText-30"
+						positionType="Float"/>
+					<box>					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+</box>
+					<textElement>
+						<font fontName="Verdana" size="12"/>
+					</textElement>
+				<text><![CDATA[Cidade:]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" pattern="" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="69"
+						y="450"
+						width="173"
+						height="17"
+						forecolor="#000000"
+						backcolor="#FFFFFF"
+						key="textField-50"/>
+					<box>					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+</box>
+					<textElement>
+						<font fontName="Verdana" size="12"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[( $F{sg_EnderecoEstado}==null ? "Não cadastrado" : $F{sg_EnderecoEstado} )]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						x="17"
+						y="450"
+						width="52"
+						height="17"
+						forecolor="#000000"
+						backcolor="#FFFFFF"
+						key="staticText-31"
+						positionType="Float"/>
+					<box>					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+</box>
+					<textElement>
+						<font fontName="Verdana" size="12"/>
+					</textElement>
+				<text><![CDATA[Estado:]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" pattern="" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="281"
+						y="454"
+						width="236"
+						height="17"
+						forecolor="#000000"
+						backcolor="#FFFFFF"
+						key="textField-51"/>
+					<box>					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+</box>
+					<textElement>
+						<font fontName="Verdana" size="12"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[( $F{cd_Cep}==null ? "Não cadastrado" : $F{cd_Cep} )]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						x="251"
+						y="454"
+						width="30"
+						height="17"
+						forecolor="#000000"
+						backcolor="#FFFFFF"
+						key="staticText-32"
+						positionType="Float"/>
+					<box>					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+</box>
+					<textElement>
+						<font fontName="Verdana" size="12"/>
+					</textElement>
+				<text><![CDATA[CEP:]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" pattern="" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="77"
+						y="470"
+						width="165"
+						height="17"
+						forecolor="#000000"
+						backcolor="#FFFFFF"
+						key="textField-52"/>
+					<box>					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+</box>
+					<textElement>
+						<font fontName="Verdana" size="12"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[( $F{cd_Cep}==null ? "Não cadastrado" : $F{cd_Cep} )]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						x="17"
+						y="470"
+						width="61"
+						height="17"
+						forecolor="#000000"
+						backcolor="#FFFFFF"
+						key="staticText-33"
+						positionType="Float"/>
+					<box>					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+</box>
+					<textElement>
+						<font fontName="Verdana" size="12"/>
+					</textElement>
+				<text><![CDATA[Telefone:]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" pattern="" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="48"
+						y="490"
+						width="194"
+						height="17"
+						forecolor="#000000"
+						backcolor="#FFFFFF"
+						key="textField-54"/>
+					<box>					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+</box>
+					<textElement>
+						<font fontName="Verdana" size="12"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[( $F{cd_Fax}==null ? "Não cadastrado" : $F{cd_Fax} )]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						x="17"
+						y="490"
+						width="31"
+						height="17"
+						forecolor="#000000"
+						backcolor="#FFFFFF"
+						key="staticText-35"
+						positionType="Float"/>
+					<box>					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+</box>
+					<textElement>
+						<font fontName="Verdana" size="12"/>
+					</textElement>
+				<text><![CDATA[Fax:]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" pattern="" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="296"
+						y="494"
+						width="221"
+						height="17"
+						forecolor="#000000"
+						backcolor="#FFFFFF"
+						key="textField-55"/>
+					<box>					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+</box>
+					<textElement>
+						<font fontName="Verdana" size="12"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[( $F{nm_Email}==null ? "Não cadastrado" : $F{nm_Email} )]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						x="251"
+						y="494"
+						width="45"
+						height="17"
+						forecolor="#000000"
+						backcolor="#FFFFFF"
+						key="staticText-36"
+						positionType="Float"/>
+					<box>					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+</box>
+					<textElement>
+						<font fontName="Verdana" size="12"/>
+					</textElement>
+				<text><![CDATA[E-mail:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						mode="Opaque"
+						x="11"
+						y="517"
+						width="171"
+						height="26"
+						forecolor="#FFFFFF"
+						backcolor="#2B2B80"
+						key="staticText-37"
+						positionType="Float"/>
+					<box leftPadding="2" rightPadding="2" topPadding="2"></box>
+					<textElement textAlignment="Center">
+						<font fontName="Verdana" size="18"/>
+					</textElement>
+				<text><![CDATA[Observações]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" pattern="" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="17"
+						y="546"
+						width="500"
+						height="37"
+						forecolor="#000000"
+						backcolor="#FFFFFF"
+						key="textField-56"/>
+					<box>					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+</box>
+					<textElement>
+						<font fontName="Verdana" size="12"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[( $F{ds_Obs}==null ? "Não cadastrado" : $F{ds_Obs} )]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="69"
+						y="191"
+						width="448"
+						height="17"
+						key="textField-57"/>
+					<box></box>
+					<textElement>
+						<font fontName="Verdana" size="12"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{nm_Empresa}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" pattern="" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="283"
+						y="210"
+						width="234"
+						height="17"
+						forecolor="#000000"
+						backcolor="#FFFFFF"
+						key="textField-58"/>
+					<box>					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+</box>
+					<textElement>
+						<font fontName="Verdana" size="12"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[""+($F{sg_Lembrar}.toString()=="true" ? "Lembrar em:  "+$F{dt_Lembrar} : " " )]]></textFieldExpression>
+				</textField>
+			</band>
+		</detail>
+		<columnFooter>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</columnFooter>
+		<pageFooter>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</pageFooter>
+		<summary>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</summary>
+</jasperReport>

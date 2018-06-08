@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='ISO-8859-1'  ?>
+<!DOCTYPE toc
+  PUBLIC "-//Sun Microsystems Inc.//DTD JavaHelp TOC Version 2.0//EN"
+         "http://java.sun.com/products/javahelp/toc_2_0.dtd">
+<toc version="2.0">
+
+<tocitem text="Apresentação" target="Apresentacao"/>
+<tocitem text="Login" target="Login"/>
+<tocitem text="Principal" target="Principal"/>
+<tocitem text="Empresa Responsável" target="EmpresaResponsavel"/>
+<tocitem text="Cópia de segurança" target="C_pia_de_seguran_a"/>
+<tocitem text="Usuário" target="CadastroUsuario">
+     <tocitem text="Cadastro de usuário" target="Cadastro_de_usu_rio"/>
+</tocitem>
+<tocitem text="Funcionários">
+     <tocitem text="Cadastro de funcionário" target="Cadastro_de_funcion_rio"/>
+     <tocitem text="Consulta de funcionários" target="Consulta_de_funcion_rios"/>
+     <tocitem text="Relatório de funcionários" target="Relat_rio_de_funcion_rios"/>
+</tocitem>
+<tocitem text="Representadas">
+     <tocitem text="Cadastro de representada" target="Cadastro_de_representada"/>
+     <tocitem text="Consulta de representadas" target="Consulta_de_representadas"/>
+     <tocitem text="Relatório de representadas" target="Relat_rio_de_representadas"/>
+</tocitem>
+<tocitem text="Clientes">
+     <tocitem text="Cadastro de clientes" target="Cadastro_de_clientes"/>
+     <tocitem text="Consulta de clientes" target="Consulta_de_clientes"/>
+     <tocitem text="Relatório de clientes" target="Relat_rio_de_clientes"/>
+     <tocitem text="Visitas">
+          <tocitem text="Cadastro de empresa visitada" target="Cadastro_de_empresa_visitada"/>
+          <tocitem text="Consulta de empresas visitadas" target="Consulta_de_empresas_visitadas"/>
+          <tocitem text="Relatório de empresas visitadas" target="Relat_rio_de_empresas_visitadas"/>
+     </tocitem>
+</tocitem>
+<tocitem text="Vendas">
+     <tocitem text="Cadastro" target="Cadastro"/>
+     <tocitem text="Consulta de vendas" target="Consulta_de_vendas"/>
+     <tocitem text="Relatório de vendas" target="Relat_rio_de_vendas"/>
+</tocitem>
+<tocitem text="Úteis">
+     <tocitem text="Recados" target="Recados"/>
+     <tocitem text="Agenda de contatos" target="Agenda_de_contatos"/>
+     <tocitem text="Notificações" target="Notifica__es"/>
+</tocitem>
+</toc>

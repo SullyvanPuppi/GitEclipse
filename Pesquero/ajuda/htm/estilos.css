@@ -1,0 +1,339 @@
+/*
+* Autor: Sullyvan Puppi
+*
+* Projeto Pesquero representações
+*
+* -----Padrões de cores------
+* 
+* fundo: #FFFFFF;
+* azul padrão: #2B2B80;
+* laranja : #FF6600;
+* cinza : #2B2B80;
+*/
+
+/*----Estrutura padrão-----*/
+body {
+	background: #FFFFFF;
+	margin-left: 0px;
+	margin-top: 3px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	text-align: left;
+}
+.simples{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-weight:bold;
+	font-stretch:expanded;
+	color: #2B2B80;
+}
+.simples:visited {
+	color: #2B2B80;
+	text-decoration:underline;
+}
+.simples:hover {
+	color: #FF6600;
+	text-decoration:underline;
+}
+.simples:active {
+	color: #2B2B80;
+	text-decoration:underline;
+}
+.contato{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-weight:bold;
+	font-stretch:expanded;
+	color: #FFFFFF;
+}
+.contato:visited {
+	color: #FFFFFF;
+	text-decoration:underline;
+}
+.contato:hover {
+	color: #FFFFFF;
+	text-decoration:underline;
+}
+.contato:active {
+	color: #FFFFFF;
+	text-decoration:underline;
+}
+.principal{
+	width: 777px;
+	height: auto;
+	text-align: center;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size:13px;
+	border: 2px solid #2B2B80;
+	margin-left: auto;
+	margin-right:auto;
+	margin-bottom: auto;
+}
+.topo{
+	width: auto;
+	text-align: center;
+	font-size: 14px;
+	vertical-align: text-top;
+	background-color: #FFFFFF;
+	background-image:url(fundoTopo.gif);
+	background-repeat: repeat-x;
+	padding: 0px;
+}
+.logo{
+	width: 130px;
+	height: 211px;
+	text-align: right;
+	vertical-align: text-top;
+	
+}
+.empresa{
+	width: 580px;
+	height: 150px;
+	vertical-align: text-top;
+	text-align: left;
+	background-image:url(Pesquero.gif);
+}
+.menu{
+	width: auto;
+	height: 20px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size:14px;
+	text-align: right;	
+	padding: 0px;
+}
+.homeTopo{
+	width: 777px;
+	height: 26px;
+	font-size: 16px;
+	text-align: right;
+	color: #000099;
+	background-color: #FFFFFF;
+	padding: 0px;
+}
+.form{
+	height: 24px;
+	margin: 0px;
+	padding: 0px;
+}
+.homeTxtLogin{
+	width: 165px;
+	height: 22px;
+	vertical-align: middle;
+	font:  18px "Verdana";
+	border: 1px solid #003366;
+	color: #CCCCCC;
+}
+.homeBtnLogin{
+	width: 70px;
+	height: 22px;
+	border: 1px solid #003366;
+	background-color: #e4e4e4;
+	vertical-align: middle;
+	color: #000099;
+	margin-right: 5px;
+}
+.subMenu{
+	padding-top: 19px;
+	width: auto;
+	height: 20px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size:14px;
+	text-align: right;
+}
+.subMenuItens{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	color: #333333;
+	text-decoration:underline;
+}
+.subMenuItens:visited {
+	color: #333333;
+	text-decoration: underline;
+}
+.subMenuItens:hover {
+	color: #000099;
+	text-decoration: none;
+}
+.subMenuItens:active {
+	color: #000099;
+	text-decoration: none;
+}
+.form{
+	height: 30px;
+	margin: 0px;
+	padding: 0px;
+}
+.tabela{
+	border: 0px solid #FFFFFF;
+	text-align: center;
+	vertical-align: text-top;
+	padding: 0px;
+}
+.copyright{
+	padding-top: 7px;
+	width: auto;
+	height: 23px;
+	font:  11px "Verdana";
+	color: #FFFFFF;
+	background-color: #2B2B80;
+	border: 2px solid  #FFFFFF;
+}
+.box{
+	width: 777px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-stretch:expanded;
+	font-weight: bold;
+	color: #666666;
+	vertical-align: top;
+	text-align: left;
+}
+.titulo{
+	height: 45px;
+	width: auto;;
+	font-size: 24px;
+	padding: 0px;
+	margin: 0px;
+	letter-spacing: 12px;
+	text-align: left;
+	color: #2B2B80;
+}
+.subTitulo{
+	font-stretch:expanded;
+	font-weight: bold;
+	color: #2B2B80;
+}
+.dados{
+	height: 70px;
+	width: 777px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	text-align: left;
+	color: #FFFFFF;
+	background-color: #2B2B80;
+	padding-top: 6px;
+	padding-bottom: 6px;
+}
+li{
+	color: #FF6600;
+}
+.internoSubTitulo{
+	font-size: 16px;
+	text-align: left;
+	letter-spacing: 6px;
+	color: #2B2B80;
+}
+.internoDivideMenu{
+	border-bottom: 1px solid #25517C;
+	padding-bottom: 0px;
+	padding-top: 0px;
+}
+.internoFoto{
+	height: auto;
+	width: 175px;
+	padding: 18px;
+	margin-bottom: 5px;
+	background-color:#FFFFFF;
+	border: 2px solid #2B2B80;
+	padding-top: 30px; 
+}
+.fotoHome{
+	height: auto;
+	width: 250px;
+	padding: 6px;
+	margin-bottom: 5px;
+	background-color:#FFFFFF;
+	border: 2px solid #2B2B80;
+}
+.fotoRepresentada{
+	height: auto;
+	width: 250px;
+	padding: 6px;
+	margin-bottom: 3px;
+	background-color:#FFFFFF;
+	border: 2px solid #2B2B80;
+}
+.internoTexto{
+	width: 400px;
+	text-align: left;
+	vertical-align: text-top;
+}
+.internoProdutos{
+	text-align: left;
+	vertical-align: text-top;
+}
+.produtoBox{
+	width: 536px;
+	height: auto;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	text-align: left;
+	vertical-align: text-top;
+	font-stretch:expanded;
+	font-weight: bold;
+	color: #666666;
+	border: 2px solid #2B2B80;
+}
+.produtoColTexto{
+	vertical-align: text-top;
+}
+.produtoListTexto{
+	width: 360px;
+	text-align: left;
+	vertical-align: top;
+	padding: 0px;
+	margin: 0px;
+}
+.produtoTopo{
+	width: 500px;
+	height: 150px;
+	font-size: 14px;
+}
+.produtoTexto{
+	width: 300px;
+	color: #666666;
+	font-size: 13px;
+}
+.produtoTitulo{
+	width: 330px;
+	font-size: 16px;
+	padding: 0px;
+	margin: 0px;
+	letter-spacing: 12px;
+	text-align: left;
+	vertical-align: top;
+	color: #2B2B80;
+}
+.produtoColFoto{
+	width: 200px;
+	height: 280px;
+	background-image: url(Produtos/fxImagem.gif);
+	text-align: right;
+	vertical-align: top;
+	background-repeat:repeat-y;
+}
+.produtoFoto{
+	height: auto;
+	width: 130px;
+	padding: 6px;
+	margin-bottom: 5px;
+	background-color:#FFFFFF;
+	border: 2px solid #2B2B80;
+}
+.textoDs{
+	font-size: 10px;
+}
+.textoPhp{
+	font-size: 13px;
+	color:#666666;
+}
+.field {
+	BORDER-RIGHT: #c0c0c0 1px solid; BORDER-TOP: #c0c0c0 1px solid; SCROLLBAR-FACE-COLOR: #cccccc; FONT-SIZE: 11px; SCROLLBAR-HIGHLIGHT-COLOR: #ffffff; BORDER-LEFT: #c0c0c0 1px solid; SCROLLBAR-SHADOW-COLOR: #ffffff; COLOR: #2B2B80; SCROLLBAR-3DLIGHT-COLOR: #ffffff; SCROLLBAR-ARROW-COLOR: #666666; SCROLLBAR-TRACK-COLOR: #ffffff; BORDER-BOTTOM: #c0c0c0 1px solid; FONT-FAMILY: "Arial"; SCROLLBAR-DARKSHADOW-COLOR: #ffffff; SCROLLBAR-BASE-COLOR: #cccccc; BACKGROUND-COLOR: #ffffff; TEXT-DECORATION: none
+}
+.cmbContato {
+	width: 290px;
+	BORDER-RIGHT: #c0c0c0 1px solid; BORDER-TOP: #c0c0c0 1px solid; SCROLLBAR-FACE-COLOR: #cccccc; FONT-SIZE: 11px; SCROLLBAR-HIGHLIGHT-COLOR: #ffffff; BORDER-LEFT: #c0c0c0 1px solid; SCROLLBAR-SHADOW-COLOR: #ffffff; COLOR: #2B2B80; SCROLLBAR-3DLIGHT-COLOR: #ffffff; SCROLLBAR-ARROW-COLOR: #666666; SCROLLBAR-TRACK-COLOR: #ffffff; BORDER-BOTTOM: #c0c0c0 1px solid; FONT-FAMILY: "Arial"; SCROLLBAR-DARKSHADOW-COLOR: #ffffff; SCROLLBAR-BASE-COLOR: #cccccc; BACKGROUND-COLOR: #ffffff; TEXT-DECORATION: none
+}
+.txtMsg {
+	width: 463px;
+	height: 150px;
+	BORDER-RIGHT: #c0c0c0 1px solid; BORDER-TOP: #c0c0c0 1px solid; SCROLLBAR-FACE-COLOR: #cccccc; FONT-SIZE: 11px; SCROLLBAR-HIGHLIGHT-COLOR: #ffffff; BORDER-LEFT: #c0c0c0 1px solid; SCROLLBAR-SHADOW-COLOR: #ffffff; COLOR: #2B2B80; SCROLLBAR-3DLIGHT-COLOR: #ffffff; SCROLLBAR-ARROW-COLOR: #666666; SCROLLBAR-TRACK-COLOR: #ffffff; BORDER-BOTTOM: #c0c0c0 1px solid; FONT-FAMILY: "Arial"; SCROLLBAR-DARKSHADOW-COLOR: #ffffff; SCROLLBAR-BASE-COLOR: #cccccc; BACKGROUND-COLOR: #ffffff; TEXT-DECORATION: none
+}
+.button {
+	BORDER-RIGHT: #666666 1px solid; BORDER-TOP: #666666 1px solid; FONT-SIZE: 11px; BORDER-LEFT: #666666 1px solid; COLOR: #2B2B80; BORDER-BOTTOM: #666666 1px solid; FONT-FAMILY: verdana; BACKGROUND-COLOR: #e4e4e4;
+}
