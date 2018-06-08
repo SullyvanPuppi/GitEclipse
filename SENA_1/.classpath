@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry path="" kind="src"/>
+	<classpathentry path="org.eclipse.jdt.launching.JRE_CONTAINER" kind="con"/>
+	<classpathentry path="lib/looks-2.1.4.jar" kind="lib"/>
+	<classpathentry path="lib/mysql-connector-java-5.0.7-bin.jar" kind="lib"/>
+	<classpathentry path="lib/jasperreports-2.0.2.jar" kind="lib"/>
+	<classpathentry path="lib/iReport.jar" kind="lib"/>
+	<classpathentry path="" kind="output"/>
+</classpath>

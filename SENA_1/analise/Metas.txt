@@ -1,0 +1,39 @@
+
+Novas características do SENA 1
+
+Na tela de cadastro de usuários exibir características de cada grupo
+
+Tornar o sistema flexível tanto para instituições de ensino gratuitas quanto para pagas.
+
+Criar grupos de usuários "simbólicos"
+
+Sistema de gráficos de aproveitamento
+
+Sistema de aniversariantes
+
+Abono de faltas
+
+Listagem de classes padrão pelo ano atual
+
+Listagem de alunos com quadro de dados resumido que mostra os dados resumidos do aluno selecionado
+
+Cadastro de alunos com dependências
+
+Cadastro de dispensa de componente curricular
+
+Meta Tornar o sistema o mais intuitivo possível
+
+Montagem de classes simplificada e sem bug's
+
+Desenvolver textos alternativos (Tooltiptext)
+
+Cuidar do layout
+
+Gerar comentários de TUDO!
+
+Gerar documentação pelo javadoc
+
+
+******************************************
+
+Terminologia (Bimestral, semestral,...)
